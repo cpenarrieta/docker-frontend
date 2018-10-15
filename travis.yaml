@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before-install:
+  - docket build -t cpenarrieta/docker-frontend -f Dockerfile.dev .
+
+script:
+  - docker run cpenarrieta/docker-frontend npm run test -- --coverage

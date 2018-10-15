@@ -9,11 +9,11 @@ script:
   - docker run docker-frontend npm run test -- --coverage
 
 deploy:
-  provider: "elasticbeanstalk"
+  provider: elasticbeanstalk
   region: "us-east-1"
   app: "dockerFrontend"
   env: "dockerfrontend-env"
-  bucket_name: "Dockerfrontend-env.exa3m4qb2f.us-east-1.elasticbeanstalk.com"
+  bucket_name: "elasticbeanstalk-us-east-1-828961278928"
   bucket_path: "dockerFrontend"
   on:
     branch: master
